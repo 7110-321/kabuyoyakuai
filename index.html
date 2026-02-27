@@ -3,23 +3,148 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>決算要約AI 法的情報</title>
+  <title>決算要約AI｜決算短信を3行で。LINEに即通知</title>
+  <meta name="description" content="決算要約AIは、決算短信PDFを自動で要約し、重要ポイントをLINEで通知するサービスです。ウォッチ銘柄に絞って見逃しを防ぎます。" />
   <style>
-    body{font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.7;margin:24px;max-width:860px}
-    a{color:#0b57d0}
-    .box{padding:16px;border:1px solid #e5e7eb;border-radius:12px}
+    body{font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.7;margin:24px;max-width:980px}
+    a{color:#0b57d0;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .muted{color:#6b7280}
+    .box{padding:16px;border:1px solid #e5e7eb;border-radius:12px;background:#fff}
+    .hero{padding:22px;border:1px solid #e5e7eb;border-radius:16px;background:linear-gradient(180deg,#f8fafc, #ffffff)}
+    .grid{display:grid;gap:16px}
+    @media (min-width:860px){ .grid-2{grid-template-columns:1.2fr 1fr} .grid-3{grid-template-columns:repeat(3,1fr)} }
+    .badge{display:inline-block;padding:4px 10px;border:1px solid #e5e7eb;border-radius:999px;font-size:12px;background:#fff}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid #0b57d0;background:#0b57d0;color:#fff;font-weight:600}
+    .btn:hover{opacity:.92;text-decoration:none}
+    .btn-sub{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid #e5e7eb;background:#fff;color:#111827;font-weight:600}
+    .btn-sub:hover{text-decoration:none;background:#f9fafb}
+    .kpis{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .kpis .badge{background:#f9fafb}
+    .ph{border:1px dashed #cbd5e1;border-radius:14px;padding:18px;background:#f8fafc}
+    .ph small{display:block;margin-top:6px}
+    .list-tight{margin:10px 0 0 18px}
+    .hr{height:1px;background:#e5e7eb;margin:20px 0}
+    footer{margin-top:24px;padding-top:14px;border-top:1px solid #e5e7eb}
   </style>
 </head>
+
 <body>
-  <h1>決算要約AI 法的情報</h1>
-  <div class="box">
-    <p>以下をご確認ください。</p>
-    <ul>
-      <li><a href="./terms.html">利用規約</a></li>
-      <li><a href="./privacy.html">プライバシーポリシー</a></li>
-      <li><a href="./tokushoho.html">特定商取引法に基づく表記</a></li>
-    </ul>
-    <p style="font-size:14px;color:#6b7280;">※本ページは決算要約AI（決算要約通知サービス）の提供に関連する法的文書です。</p>
-  </div>
+  <header class="hero grid grid-2">
+    <div>
+      <span class="badge">決算要約通知サービス</span>
+      <h1 style="margin:10px 0 6px;">決算要約AI</h1>
+      <p style="margin:0 0 10px;font-size:18px;">
+        決算短信PDFを自動で要約して、<b>重要ポイントをLINEで即通知</b>。
+        “読む時間”を削って、意思決定を速く。
+      </p>
+      <div class="kpis">
+        <span class="badge">ウォッチ銘柄に絞れる</span>
+        <span class="badge">要点＋数字（増減）を短く</span>
+        <span class="badge">開示が多い日も安心</span>
+      </div>
+
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <!-- ここにLINE追加URLがあるなら差し替え -->
+        <a class="btn" href="#" aria-label="LINEで友だち追加">LINEで友だち追加</a>
+        <a class="btn-sub" href="#how">使い方を見る</a>
+      </div>
+
+      <p class="muted" style="margin-top:10px;font-size:13px;">
+        ※投資助言ではありません。最終判断は必ずご自身で行ってください。
+      </p>
+    </div>
+
+    <div class="ph" aria-label="サービス画像プレースホルダ">
+      <b>画像/スクリーンショット枠</b>
+      <small class="muted">
+        おすすめ：LINEの通知サンプル（スマホ画面） or サービスのロゴ＋図解（「PDF→要約→LINE」）
+      </small>
+      <!-- 実画像を入れるなら例：
+      <img src="./assets/preview.png" alt="LINE通知のサンプル" style="width:100%;border-radius:12px;margin-top:10px;" />
+      -->
+    </div>
+  </header>
+
+  <section style="margin-top:18px;" class="grid grid-3">
+    <div class="box">
+      <h2 style="margin:0 0 6px;font-size:18px;">何が届く？</h2>
+      <ul class="list-tight">
+        <li>売上・営業利益などの主要指標</li>
+        <li>前年同期比の増減・会社コメントの要点</li>
+        <li>見通し（上方/据置/下方）など</li>
+      </ul>
+      <p class="muted" style="margin:10px 0 0;font-size:13px;">※内容は開示資料の記載範囲で自動要約されます。</p>
+    </div>
+
+    <div class="box">
+      <h2 style="margin:0 0 6px;font-size:18px;">誰向け？</h2>
+      <ul class="list-tight">
+        <li>決算シーズンに見逃したくない人</li>
+        <li>通知で“まず要点だけ”掴みたい人</li>
+        <li>監視銘柄が多くて追えない人</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2 style="margin:0 0 6px;font-size:18px;">強み</h2>
+      <ul class="list-tight">
+        <li>開示が多い日でもウォッチ銘柄のみ通知</li>
+        <li>短く要点化（読む前の判断が速い）</li>
+        <li>LINEで完結（アプリ不要）</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <section id="how" class="box">
+    <h2 style="margin:0 0 8px;">使い方（3ステップ）</h2>
+    <ol style="margin:0 0 0 18px;">
+      <li>LINEで友だち追加</li>
+      <li>ウォッチしたい銘柄（証券コード）を登録</li>
+      <li>決算開示が出たら要約が届く</li>
+    </ol>
+    <p class="muted" style="margin:10px 0 0;font-size:13px;">
+      ※ウォッチ登録のコマンド例やUIがあるなら、ここにスクショを入れると一気に分かりやすくなります。
+    </p>
+  </section>
+
+  <section style="margin-top:16px;" class="grid grid-2">
+    <div class="box">
+      <h2 style="margin:0 0 8px;">よくある質問</h2>
+      <details>
+        <summary>無料で使えますか？</summary>
+        <p class="muted">無料プラン/有料プランの内容が決まっているならここに記載。未定なら「現在テスト提供中」などでもOK。</p>
+      </details>
+      <details>
+        <summary>通知が多すぎませんか？</summary>
+        <p class="muted">ウォッチ銘柄に限定して通知する想定。必要に応じて上限や頻度設定があるなら追記。</p>
+      </details>
+      <details>
+        <summary>投資の助言ですか？</summary>
+        <p class="muted">いいえ。開示資料の要約を提供するもので、投資判断はご自身でお願いします。</p>
+      </details>
+    </div>
+
+    <div class="box">
+      <h2 style="margin:0 0 8px;">法的情報</h2>
+      <p>以下をご確認ください。</p>
+      <ul class="list-tight">
+        <li><a href="./terms.html">利用規約</a></li>
+        <li><a href="./privacy.html">プライバシーポリシー</a></li>
+        <li><a href="./tokushoho.html">特定商取引法に基づく表記</a></li>
+      </ul>
+      <p class="muted" style="margin-top:10px;font-size:13px;">
+        ※本ページは決算要約AI（決算要約通知サービス）の提供に関連する法的文書です。
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p class="muted" style="font-size:13px;margin:0;">
+      © 決算要約AI
+    </p>
+  </footer>
 </body>
 </html>
