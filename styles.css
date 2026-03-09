@@ -234,57 +234,51 @@ footer{
 }
 
 /* ===== GUIDE ===== */
+#guide .guide-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
 #guide .guide-card{
   border:1px solid #e5e7eb;
   border-radius:16px;
   background:#fff;
-  padding:22px;
-  margin-top:16px;
+  padding:20px;
   box-shadow:0 1px 0 rgba(17,24,39,.04);
 }
 
 #guide .guide-card h3{
   font-size:20px;
-  margin:0 0 8px;
-}
-
-#guide .guide-lead,
-#guide .guide-desc{
-  font-size:15px;
-  margin:0 0 14px;
+  margin:0 0 12px;
 }
 
 #guide .step-row{
   display:grid;
-  grid-template-columns:180px minmax(0, 420px);
-  gap:20px;
-  padding:14px 0 0;
+  grid-template-columns:1fr;
+  gap:12px;
   align-items:start;
-  justify-content:start;
 }
 
 #guide .step-img-wrap{
-  width:180px;
-  max-width:180px;
-  justify-self:start;
+  width:100%;
+  display:flex;
+  justify-content:center;
 }
 
 #guide .step-img{
-  width:180px;
-  max-width:180px;
+  width:min(260px, 100%);
   height:auto;
   border-radius:10px;
   border:1px solid #e5e7eb;
   background:#fff;
   display:block;
-  object-fit:contain;
-  object-position:center;
 }
 
 #guide .step-text{
-  font-size:17px;
+  font-size:16px;
   line-height:1.8;
-  max-width:420px;
+  min-width:0;
 }
 
 #guide .step-head{
@@ -292,66 +286,94 @@ footer{
 }
 
 #guide .step-head b{
-  font-size:18px;
+  font-size:17px;
 }
 
 #guide .step-text .muted{
-  font-size:15px;
-  line-height:1.7;
+  font-size:14px;
+  line-height:1.75;
+  margin:0;
+  word-break:keep-all;
+  overflow-wrap:break-word;
 }
 
-/* PC */
+/* PCだけ横並びカード */
 @media (min-width:860px){
   body{
     font-size:17px;
   }
 
-  #guide .step-row{
-    grid-template-columns:160px minmax(0, 380px);
+  #guide .guide-grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr));
     gap:18px;
-    justify-content:start;
+    align-items:start;
+  }
+
+  #guide .guide-card{
+    height:100%;
+    padding:18px;
+  }
+
+  #guide .guide-card h3{
+    font-size:18px;
+    margin:0 0 12px;
+  }
+
+  #guide .step-row{
+    grid-template-columns:120px minmax(0, 1fr);
+    gap:14px;
+    align-items:start;
   }
 
   #guide .step-img-wrap{
-    width:160px;
-    max-width:160px;
-    margin:0;
+    width:120px;
+    justify-content:flex-start;
   }
 
   #guide .step-img{
-    width:160px;
-    max-width:160px;
+    width:120px;
+    max-width:120px;
     margin:0;
   }
 
   #guide .step-text{
-    max-width:380px;
+    max-width:220px;
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  #guide .step-head b{
+    font-size:16px;
+  }
+
+  #guide .step-text .muted{
+    font-size:14px;
   }
 }
 
 /* タブレット */
-@media (max-width:859px){
+@media (min-width:769px) and (max-width:859px){
+  #guide .guide-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
   #guide .step-row{
-    grid-template-columns:160px minmax(0, 1fr);
-    gap:16px;
+    grid-template-columns:130px minmax(0, 1fr);
+    gap:14px;
   }
 
   #guide .step-img-wrap{
-    width:160px;
-    max-width:160px;
+    justify-content:flex-start;
   }
 
   #guide .step-img{
-    width:160px;
-    max-width:160px;
-  }
-
-  #guide .step-text{
-    max-width:none;
+    width:130px;
+    max-width:130px;
+    margin:0;
   }
 }
 
-/* SP */
+/* スマホ */
 @media (max-width:768px){
   body{
     margin:16px;
@@ -364,35 +386,26 @@ footer{
   #guide .step-row{
     grid-template-columns:1fr;
     gap:12px;
-    padding:0;
   }
 
   #guide .step-img-wrap{
     width:100%;
-    max-width:280px;
-    margin:8px auto 0;
+    display:flex;
+    justify-content:center;
   }
 
   #guide .step-img{
-    width:100%;
-    max-width:280px;
+    width:min(280px, calc(100vw - 64px));
+    max-width:100%;
     margin:0 auto;
   }
 
   #guide .step-text{
     font-size:16px;
     line-height:1.8;
-    max-width:none;
-    writing-mode:horizontal-tb;
-    word-break:keep-all;
-    overflow-wrap:break-word;
   }
 
   #guide .step-head b{
     font-size:17px;
-  }
-
-  #guide .step-text .muted{
-    font-size:14px;
   }
 }
