@@ -291,10 +291,13 @@ footer{
   }
 
   #guide .step-img{
-    aspect-ratio:3 / 4;
-    max-height:340px;
-    object-fit:cover;
-    object-position:top;
+    width:100%;
+    max-width:260px;
+    height:auto;
+    max-height:none;
+    aspect-ratio:auto;
+    object-fit:contain;
+    object-position:center;
   }
 }
 
@@ -328,6 +331,9 @@ footer{
   #guide .step-img{
     display:block;
     width:min(280px, 100%);
+    max-width:100%;
+    height:auto;
     margin:8px auto 0;
+    object-fit:contain;
   }
 }
