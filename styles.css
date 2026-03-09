@@ -265,6 +265,7 @@ footer{
 #guide .step-text{
   font-size:17px;
   line-height:1.8;
+  min-width:0;
 }
 
 #guide .step-head b{
@@ -276,22 +277,42 @@ footer{
   line-height:1.65;
 }
 
+#guide .step-img-wrap{
+  width:100%;
+  max-width:260px;
+  margin:0 auto;
+}
+
 #guide .step-img{
   width:100%;
+  max-width:260px;
   height:auto;
   border-radius:10px;
   border:1px solid #e5e7eb;
   background:#fff;
   display:block;
+  margin:0 auto;
+  object-fit:contain;
+  object-position:center;
 }
 
+/* PC */
 @media (min-width:860px){
   body{
     font-size:17px;
   }
 
+  #guide .step-row{
+    grid-template-columns:minmax(0,1fr) 260px;
+  }
+
+  #guide .step-img-wrap{
+    width:260px;
+    max-width:260px;
+  }
+
   #guide .step-img{
-    width:100%;
+    width:260px;
     max-width:260px;
     height:auto;
     max-height:none;
@@ -301,6 +322,7 @@ footer{
   }
 }
 
+/* SP */
 @media (max-width:768px){
   body{
     margin:16px;
@@ -328,12 +350,18 @@ footer{
     font-size:17px;
   }
 
-  #guide .step-img{
-    display:block;
-    width:min(280px, 100%);
-    max-width:100%;
-    height:auto;
+  #guide .step-img-wrap{
+    width:100%;
+    max-width:280px;
     margin:8px auto 0;
+  }
+
+  #guide .step-img{
+    width:100%;
+    max-width:280px;
+    height:auto;
+    margin:0 auto;
     object-fit:contain;
+    object-position:center;
   }
 }
