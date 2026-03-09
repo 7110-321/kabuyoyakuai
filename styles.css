@@ -1,193 +1,279 @@
 body{
-    font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
-    line-height:1.7;
-    margin:24px auto; 
-    max-width:980px;
-    font-size:16px; 
-  }
-  a{color:#0b57d0;text-decoration:none}
-  a:hover{text-decoration:underline}
-  .muted{color:#6b7280}
-  img{max-width:100%;height:auto}
-  
-  .box{
-    padding:16px;
-    border:1px solid #e5e7eb;
-    border-radius:12px;
-    background:#fff
-  }
-  
-  .hero{
-    padding:22px;
-    border:1px solid #e5e7eb;
-    border-radius:16px;
-    background:linear-gradient(180deg,#f8fafc, #ffffff)
-  }
-  
-  .grid{display:grid;gap:16px}
-  @media (min-width:860px){
-    .grid-2{grid-template-columns:1.2fr 1fr}
-    .grid-3{grid-template-columns:repeat(3,1fr)}
-  }
-  
-  .badge{
-    display:inline-block;
-    padding:4px 10px;
-    border:1px solid #e5e7eb;
-    border-radius:999px;
-    font-size:12px;
-    background:#fff
-  }
-  .badge-kpi{background:#f9fafb}
-  
-  .btn{
-    display:inline-block;
-    padding:10px 14px;
-    border-radius:10px;
-    border:1px solid #0b57d0;
-    background:#0b57d0;
-    color:#fff;
-    font-weight:600
-  }
-  .btn:hover{opacity:.92;text-decoration:none}
-  
-  .btn-sub{
-    display:inline-block;
-    padding:10px 14px;
-    border-radius:10px;
-    border:1px solid #e5e7eb;
-    background:#fff;
-    color:#111827;
-    font-weight:600
-  }
-  .btn-sub:hover{text-decoration:none;background:#f9fafb}
-  
-  .kpis{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:10px
-  }
-  
-  /* 右側カード（枠）を画像幅に合わせて縮める */
-  .media{
-    border:1px solid #e5e7eb;
-    border-radius:14px;
-    padding:16px;
-    background:#fff;
+  font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.7;
+  margin:24px auto;
+  max-width:980px;
+  font-size:16px;
+}
 
-    width: fit-content;   /* ← 追加：中身に合わせる */
-    max-width: 100%;      /* ← 追加：スマホで溢れ防止 */
-    margin: 0 auto;       /* ← 追加：中央寄せ */
+a{
+  color:#0b57d0;
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+.muted{
+  color:#6b7280;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+.box{
+  padding:16px;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  background:#fff;
+}
+
+.hero{
+  padding:22px;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  background:linear-gradient(180deg,#f8fafc,#ffffff);
+}
+
+.grid{
+  display:grid;
+  gap:16px;
+}
+
+@media (min-width:860px){
+  .grid-2{
+    grid-template-columns:1.2fr 1fr;
   }
 
-  /* 画像は % 指定をやめて、固定〜可変の“実幅”で決める */
-  .hero-image{
-    width: min(280px, 100%); /* ← ここで画像の実サイズを決める（例：320〜420） */
-    border-radius:12px;
-    border:1px solid #e5e7eb;
-    display:block;
+  .grid-3{
+    grid-template-columns:repeat(3,1fr);
   }
-  
-  .list-tight{margin:10px 0 0 18px}
-  
-  .hr{height:1px;background:#e5e7eb;margin:20px 0}
-  footer{margin-top:24px;padding-top:14px;border-top:1px solid #e5e7eb}
-  
-  .h1{margin:10px 0 6px}
-  .h2{margin:0 0 6px;font-size:18px}
-  .h2-xl{margin:0 0 8px}
-  
-  .lead{
-    margin:0 0 10px;
-    font-size:18px
-  }
-  
-  .hero-actions{
-    margin-top:14px;
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap
-  }
-  
-  .note{margin-top:10px;font-size:13px}
-  .note-p{margin:0 0 6px}
-  .note-p.last{margin:0}
-  
-  .media-head{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    flex-wrap:wrap
-  }
-  
-  .logo{
-    width:72px;
-    height:72px;
-    border-radius:14px;
-    border:1px solid #e5e7eb;
-    background:#fff
-  }
-  
-  .price{font-weight:700}
-  .subtext{font-size:13px}
-  
-  .media-hero{margin-top:12px}
+}
 
-  .section-top{margin-top:18px}
-  
-  .tiny{margin:10px 0 0;font-size:13px}
-  .p{margin:0 0 8px;font-size:14px}
-  
-  .ol{margin:0 0 0 18px}
-  
-  .mt-16{margin-top:16px}
-  
-  .sep{
-    border:none;
-    border-top:1px solid #e5e7eb;
-    margin:16px 0
-  }
-  
-  .actions{margin-top:12px}
+.badge{
+  display:inline-block;
+  padding:4px 10px;
+  border:1px solid #e5e7eb;
+  border-radius:999px;
+  font-size:12px;
+  background:#fff;
+}
 
-  /* 1ステップの見た目 */
-/* ===== GUIDE 最終調整（文字↑ 画像↓ バランス） ===== */
+.badge-kpi{
+  background:#f9fafb;
+}
+
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid #0b57d0;
+  background:#0b57d0;
+  color:#fff;
+  font-weight:600;
+}
+
+.btn:hover{
+  opacity:.92;
+  text-decoration:none;
+}
+
+.btn-sub{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid #e5e7eb;
+  background:#fff;
+  color:#111827;
+  font-weight:600;
+}
+
+.btn-sub:hover{
+  text-decoration:none;
+  background:#f9fafb;
+}
+
+.kpis{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
+
+.media{
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:16px;
+  background:#fff;
+  width:fit-content;
+  max-width:100%;
+  margin:0 auto;
+}
+
+.hero-image{
+  width:min(280px, 100%);
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  display:block;
+}
+
+.list-tight{
+  margin:10px 0 0 18px;
+}
+
+.hr{
+  height:1px;
+  background:#e5e7eb;
+  margin:20px 0;
+}
+
+footer{
+  margin-top:24px;
+  padding-top:14px;
+  border-top:1px solid #e5e7eb;
+}
+
+.h1{
+  margin:10px 0 6px;
+}
+
+.h2{
+  margin:0 0 6px;
+  font-size:18px;
+}
+
+.h2-xl{
+  margin:0 0 8px;
+}
+
+.lead{
+  margin:0 0 10px;
+  font-size:18px;
+}
+
+.hero-actions{
+  margin-top:14px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.note{
+  margin-top:10px;
+  font-size:13px;
+}
+
+.note-p{
+  margin:0 0 6px;
+}
+
+.note-p.last{
+  margin:0;
+}
+
+.media-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.logo{
+  width:72px;
+  height:72px;
+  border-radius:14px;
+  border:1px solid #e5e7eb;
+  background:#fff;
+}
+
+.price{
+  font-weight:700;
+}
+
+.subtext{
+  font-size:13px;
+}
+
+.media-hero{
+  margin-top:12px;
+}
+
+.section-top{
+  margin-top:18px;
+}
+
+.tiny{
+  margin:10px 0 0;
+  font-size:13px;
+}
+
+.p{
+  margin:0 0 8px;
+  font-size:14px;
+}
+
+.ol{
+  margin:0 0 0 18px;
+}
+
+.mt-16{
+  margin-top:16px;
+}
+
+.sep{
+  border:none;
+  border-top:1px solid #e5e7eb;
+  margin:16px 0;
+}
+
+.actions{
+  margin-top:12px;
+}
+
+/* ===== GUIDE ===== */
+#guide .guide-card{
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  background:#fff;
+  padding:22px;
+  margin-top:16px;
+  box-shadow:0 1px 0 rgba(17,24,39,.04);
+}
+
+#guide .guide-card h3{
+  font-size:20px;
+  margin:0 0 8px;
+}
+
+#guide .guide-lead,
+#guide .guide-desc{
+  font-size:15px;
+  margin:0 0 14px;
+}
+
 #guide .step-row{
   display:grid;
-  grid-template-columns: 1fr 260px;
+  grid-template-columns:1fr 260px;
   gap:14px;
   padding:14px;
   align-items:start;
 }
 
+#guide .step-text{
+  font-size:17px;
+  line-height:1.8;
+}
 
-#guide .step-text{ font-size:17px; }
-#guide .step-head b{ font-size:18px; }
+#guide .step-head b{
+  font-size:18px;
+}
 
-/* 補助文も少し大きく */
 #guide .step-text .muted{
   font-size:15px;
   line-height:1.65;
-}
-
-/* PC：縦長は維持しつつ、デカすぎないように上限 */
-@media (min-width: 860px){
-  body{ font-size:17px; }
-  #guide .step-img{
-    aspect-ratio: 3 / 4;
-    max-height: 340px;   /* 420→340で圧を下げる */
-    object-fit: cover;
-    object-position: top;
-  }
-}
-
-/* スマホ：画像は横幅いっぱいじゃなく、少し小さめに */
-@media (max-width: 520px){
-  #guide .step-img{
-    width:min(280px, 100%);
-    margin-top:8px;
-  }
 }
 
 #guide .step-img{
@@ -199,23 +285,49 @@ body{
   display:block;
 }
 
-/* ===== GUIDE: セクション枠をはっきり出す ===== */
-#guide .guide-card{
-  border:1px solid #e5e7eb;
-  border-radius:16px;
-  background:#fff;
-  padding:22px;
-  margin-top:16px; /* カード間の間隔 */
-  box-shadow: 0 1px 0 rgba(17,24,39,.04);
+@media (min-width:860px){
+  body{
+    font-size:17px;
+  }
+
+  #guide .step-img{
+    aspect-ratio:3 / 4;
+    max-height:340px;
+    object-fit:cover;
+    object-position:top;
+  }
 }
 
-/* タイトルも少し大きく */
-#guide .guide-card h3{
-  font-size:20px;
-  margin:0 0 8px;
-}
-#guide .guide-lead,
-#guide .guide-desc{
-  font-size:15px;
-  margin:0 0 14px;
+@media (max-width:768px){
+  body{
+    margin:16px;
+  }
+
+  #guide .guide-card{
+    padding:16px;
+  }
+
+  #guide .step-row{
+    grid-template-columns:1fr;
+    gap:12px;
+    padding:0;
+  }
+
+  #guide .step-text{
+    font-size:16px;
+    line-height:1.8;
+    writing-mode:horizontal-tb;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+  }
+
+  #guide .step-head b{
+    font-size:17px;
+  }
+
+  #guide .step-img{
+    display:block;
+    width:min(280px, 100%);
+    margin:8px auto 0;
+  }
 }
