@@ -240,11 +240,13 @@ footer{
   gap:16px;
 }
 
+/* ===== GUIDE 全体 ===== */
 #guide .guide-card{
   border:1px solid #e5e7eb;
   border-radius:16px;
   background:#fff;
   padding:20px;
+  margin-top:16px;
   box-shadow:0 1px 0 rgba(17,24,39,.04);
 }
 
@@ -253,26 +255,28 @@ footer{
   margin:0 0 12px;
 }
 
-#guide .step-row{
+#guide .guide-desc{
+  margin:0 0 14px;
+  font-size:14px;
+  color:#6b7280;
+}
+
+/* 各セクション内の 1,2,3 の並び */
+#guide .step-rows{
   display:grid;
   grid-template-columns:1fr;
-  gap:12px;
-  align-items:start;
+  gap:16px;
 }
 
-#guide .step-img-wrap{
-  width:100%;
+/* 1つのステップカード */
+#guide .step-row{
   display:flex;
-  justify-content:center;
-}
-
-#guide .step-img{
-  width:min(260px, 100%);
-  height:auto;
-  border-radius:10px;
+  flex-direction:column;
+  gap:12px;
   border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:16px;
   background:#fff;
-  display:block;
 }
 
 #guide .step-text{
@@ -289,50 +293,62 @@ footer{
   font-size:17px;
 }
 
+#guide .step-badge{
+  margin-right:4px;
+  font-weight:700;
+}
+
 #guide .step-text .muted{
   font-size:14px;
   line-height:1.75;
-  margin:0;
-  word-break:keep-all;
-  overflow-wrap:break-word;
+  color:#6b7280;
 }
 
-/* PCだけ横並びカード */
-@media (min-width:860px){
-  body{
-    font-size:17px;
-  }
+#guide .step-img-wrap{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
 
-  #guide .guide-grid{
+#guide .step-img-wrap a{
+  display:block;
+}
+
+#guide .step-img{
+  width:min(280px, 100%);
+  max-width:100%;
+  height:auto;
+  display:block;
+  margin:0 auto;
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+  background:#fff;
+}
+
+/* ===== PCで 1,2,3 を横並び ===== */
+@media (min-width: 860px){
+  #guide .step-rows{
     grid-template-columns:repeat(3, minmax(0, 1fr));
     gap:18px;
     align-items:start;
   }
 
-  #guide .guide-card{
-    height:100%;
-    padding:18px;
-  }
-
-  #guide .guide-card h3{
-    font-size:18px;
-    margin:0 0 12px;
-  }
-
   #guide .step-row{
-    grid-template-columns:120px minmax(0, 1fr);
-    gap:14px;
-    align-items:start;
+    height:100%;
+    padding:16px;
   }
 
   #guide .step-img-wrap{
-    width:120px;
     justify-content:flex-start;
   }
 
+  #guide .step-img-wrap a{
+    width:110px;
+  }
+
   #guide .step-img{
-    width:120px;
-    max-width:120px;
+    width:110px;
+    max-width:110px;
     margin:0;
   }
 
@@ -351,61 +367,45 @@ footer{
   }
 }
 
-/* タブレット */
-@media (min-width:769px) and (max-width:859px){
-  #guide .guide-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  #guide .step-row{
-    grid-template-columns:130px minmax(0, 1fr);
-    gap:14px;
-  }
-
-  #guide .step-img-wrap{
-    justify-content:flex-start;
+/* ===== タブレット ===== */
+@media (min-width: 769px) and (max-width: 859px){
+  #guide .step-rows{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:16px;
   }
 
   #guide .step-img{
-    width:130px;
-    max-width:130px;
-    margin:0;
+    width:140px;
+    max-width:140px;
   }
 }
 
-/* スマホ */
-@media (max-width:768px){
-  body{
-    margin:16px;
-  }
-
+/* ===== スマホ ===== */
+@media (max-width: 768px){
   #guide .guide-card{
     padding:16px;
   }
 
-  #guide .step-row{
+  #guide .step-rows{
     grid-template-columns:1fr;
-    gap:12px;
+    gap:14px;
+  }
+
+  #guide .step-row{
+    padding:14px;
   }
 
   #guide .step-img-wrap{
-    width:100%;
-    display:flex;
     justify-content:center;
   }
 
+  #guide .step-img-wrap a{
+    width:auto;
+  }
+
   #guide .step-img{
-    width:min(280px, calc(100vw - 64px));
+    width:min(280px, calc(100vw - 80px));
     max-width:100%;
     margin:0 auto;
-  }
-
-  #guide .step-text{
-    font-size:16px;
-    line-height:1.8;
-  }
-
-  #guide .step-head b{
-    font-size:17px;
   }
 }
