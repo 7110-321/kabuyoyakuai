@@ -4,6 +4,8 @@ body{
   margin:24px auto;
   max-width:980px;
   font-size:16px;
+  color:#111827;
+  background:#ffffff;
 }
 
 a{
@@ -147,6 +149,7 @@ footer{
 
 .h2-xl{
   margin:0 0 8px;
+  font-size:22px;
 }
 
 .lead{
@@ -233,6 +236,30 @@ footer{
   margin-top:12px;
 }
 
+details{
+  border-top:1px solid #e5e7eb;
+  padding:12px 0;
+}
+
+details:first-of-type{
+  margin-top:8px;
+}
+
+summary{
+  cursor:pointer;
+  font-weight:600;
+  color:#111827;
+  list-style:none;
+}
+
+summary::-webkit-details-marker{
+  display:none;
+}
+
+details p{
+  margin:8px 0 0;
+}
+
 /* ===== GUIDE ===== */
 #guide .guide-card{
   border:1px solid #e5e7eb;
@@ -284,7 +311,7 @@ footer{
 #guide .step-head{
   margin-bottom:8px;
   line-height:1.5;
-  min-height:auto;
+  min-height:0;
 }
 
 #guide .step-head b{
@@ -418,6 +445,22 @@ footer{
 @media (max-width:768px){
   body{
     margin:16px;
+  }
+
+  .hero{
+    padding:18px;
+  }
+
+  .box{
+    padding:14px;
+  }
+
+  .lead{
+    font-size:16px;
+  }
+
+  .h2-xl{
+    font-size:20px;
   }
 
   #guide .guide-card{
